@@ -78,7 +78,7 @@ export class GA4 {
     this._gtag(...args);
   }
 
-  _loadGA = (GA_MEASUREMENT_ID, nonce) => {
+  _loadGA = (GA_MEASUREMENT_ID, nonce, pt) => {
     if (typeof window === "undefined" || typeof document === "undefined") {
       return;
     }
@@ -90,6 +90,9 @@ export class GA4 {
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
       if (nonce) {
         script.setAttribute("nonce", nonce);
+      }
+      if (pt) {
+        script.setAttribute("type", "text/partytown");
       }
       document.body.appendChild(script);
 
@@ -174,11 +177,12 @@ export class GA4 {
       legacyDimensionMetric = true,
       nonce,
       testMode = false,
+      pt = false
     } = options;
     this._testMode = testMode;
 
     if (!testMode) {
-      this._loadGA(this._currentMeasurementId, nonce);
+      this._loadGA(this._currentMeasurementId, nonce, pt);
     }
     if (!this.isInitialized) {
       this._gtag("js", new Date());
