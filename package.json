@@ -1,7 +1,7 @@
 {
-  "name": "react-ga4",
+  "name": "react-ga4-w-partytown",
   "version": "1.4.1",
-  "description": "React Google Analytics 4",
+  "description": "React Google Analytics 4, with PartyTown",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "scripts": {
@@ -10,18 +10,19 @@
     "prepublish": "npm run build && npm test",
     "test": "NODE_ENV=test jest"
   },
-  "author": "Han Lin Yap (https://yap.nu)",
+  "author": "Lorenzo Dalla Muta",
   "license": "MIT",
   "keywords": [
     "GA",
     "GTM",
     "Google Analytics",
     "Google Analytics 4",
-    "Google Tag Manager"
+    "Google Tag Manager",
+    "PartyTown"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PriceRunner/react-ga4.git"
+    "url": "git+https://github.com/lorenzo-dallamuta/react-ga4-w-partytown"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
