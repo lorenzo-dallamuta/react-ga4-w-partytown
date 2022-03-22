@@ -1,6 +1,6 @@
 {
   "name": "react-ga4-w-partytown",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "React Google Analytics 4, with PartyTown",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
